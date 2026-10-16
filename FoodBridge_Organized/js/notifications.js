@@ -1,3 +1,0 @@
-/* Notifications page */
-FoodBridge.renderNotifications = function(){return `<div class="page-title"><div><p class="eyebrow">STAY CONNECTED</p><h1>Notifications</h1><p>Updates about matches, pickup windows and donation requests.</p></div><button class="btn btn-outline" id="markRead">Mark all as read</button></div><section class="panel">${FoodBridge.state.notifications.map(n=>`<div class="notification-item"><span class="activity-icon">${n.icon}</span><div><h3>${FoodBridge.esc(n.title)}</h3><p>${FoodBridge.esc(n.body)}</p><time>${FoodBridge.esc(n.time)}</time></div></div>`).join("")}</section>`;};
-FoodBridge.bindNotifications = function(){const b=document.querySelector("#markRead");if(b)b.onclick=()=>FoodBridge.toast("Notifications marked as read for this demo.");};

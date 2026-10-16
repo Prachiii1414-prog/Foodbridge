@@ -822,14 +822,6 @@
     transform: translateY(0);
 }
 
-.admin-link {
-    display: none;
-}
-
-.role-admin .admin-link {
-    display: flex;
-}
-
 /* Responsive component layouts */
 
 @media (max-width: 1050px) {

@@ -1,30 +1,52 @@
-# 🍲 FoodBridge
+# FoodBridge
 
-### Intelligent Surplus Food Redistribution and Donor-Recipient Matching System
+FoodBridge connects Hotels with surplus food to NGOs serving their communities. One Flask website provides the public landing page, sign-in and registration, and the role-specific workspace. Users do not need to open or select an HTML file manually.
 
-FoodBridge is a web-based project designed to connect food donors with people in need. It aims to reduce food wastage by making surplus food available to suitable recipients.
+## Features
 
-## ✨ Features
-- User Registration and Login
-- Donor and Recipient Dashboards
-- Food Donation Forms
-- Smart Donor-Recipient Matching
-- Food Tracking and Notifications
-- Responsive User Interface
+- Hotel and NGO registration and sign-in
+- Shared, MySQL-backed food listings
+- NGO food requests and Hotel accept/decline actions
+- A separately provisioned administrator account and protected monitoring panel
+- Responsive pages for desktop and mobile browsers
 
-## 🛠️ Technologies Used
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python Flask
-- **Database:** MySQL
+## Technology
 
-## 🎯 Objective
-To reduce food wastage and support communities by connecting surplus food with people who need it.
+- HTML, CSS, and JavaScript
+- Python 3 and Flask
+- MySQL 8
 
-## 👥 Project Team
-Developed collaboratively as a team project.
+## Run and test
 
-## 🚀 Future Scope
-- Real-time food tracking
-- Location-based matching
-- Improved notifications
-- Admin analytics and reports
+Start with the [run and mobile access guide](./FoodBridge_Organized/RUNNING.md) for installation, database setup, local use, and phone access over Wi-Fi.
+
+The application lives in [`FoodBridge_Organized/`](./FoodBridge_Organized/). Its [README](./FoodBridge_Organized/README.md) describes the current workflows and tests.
+
+## Collaborating through GitHub
+
+Accept the invitation to the collaborator's repository while signed into the GitHub account they invited. Clone that repository and check the `origin` remote before making a branch:
+
+```sh
+git clone <collaborator-repository-url>
+cd <repository-folder>
+git remote -v
+git switch -c feature/foodbridge
+```
+
+If you already cloned the project, `git remote -v` should show the collaborator's repository as `origin`. If you do not have push permission, ask the repository owner to grant it; do not push directly to their `main` branch.
+
+After making and checking your changes:
+
+```sh
+git status --short
+git add -A
+git diff --cached --check
+git commit -m "Prepare FoodBridge for local and mobile testing"
+git push -u origin feature/foodbridge
+```
+
+Then open a pull request on the collaborator's repository. Do not commit `.env`, database passwords, secret keys, or virtual environments. The repository ignores `.env` and `.venv/`; keep `.env.example` as the shareable configuration template.
+
+## Not implemented
+
+Email verification, password recovery, food image uploads, delivery tracking, automatic matching, and email notifications are future work.
